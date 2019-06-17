@@ -7,3 +7,4 @@
 * [AVL Tree](Trees/AVLTree.py)
 ## Heaps
 * [Max Heap](Heaps/MaxHeap.py)
+* [Min Heap](Heaps/MinHeap.py)
