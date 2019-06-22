@@ -90,3 +90,32 @@ class DoubleLinkedList:
             prev.next = next
             next.prev = prev
         return 0
+
+    # Returns True if found, else False
+    def search(self, data):
+        temp = self.head
+        found = False
+        while temp is not None:
+            if temp.data == data:
+                found = True
+            temp = temp.next
+        return found
+
+    # Reverses the linked list and returns the head of the new list
+    def reverse(self):
+        temp = self.head
+        while temp.next is not None:
+            temp.next, temp.prev = temp.prev, temp.next
+            temp = temp.prev
+        temp.next, temp.prev = temp.prev, temp.next
+        return temp
+
+x = DoubleLinkedList()
+x.add_node(1,-1)
+x.add_node(2,-1)
+x.add_node(3,-1)
+x.add_node(4,-1)
+x.add_node(5,-1)
+x.print_list_forward()
+x.head = x.reverse()
+x.print_list_forward()

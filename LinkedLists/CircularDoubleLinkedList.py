@@ -101,8 +101,6 @@ class CircularDoubleLinkedList:
                 next = tobedel.next
                 prev.next = tobedel.next
                 next.prev = prev
-
-
         else:
             curr = self.head
             for i in range(1, pos):
@@ -112,3 +110,22 @@ class CircularDoubleLinkedList:
             prev.next = next
             next.prev = prev
         return 0
+
+    # Returns True if found, else False
+    def search(self, data):
+        temp = self.head
+        found = False
+        while temp is not None:
+            if temp.data == data:
+                found = True
+            temp = temp.next
+        return found
+
+    # Reverses the linked list and returns the head of the new list
+    def reverse(self):
+        temp = self.head
+        while temp.next is not self.head:
+            temp.next, temp.prev = temp.prev, temp.next
+            temp = temp.prev
+        temp.next, temp.prev = temp.prev, temp.next
+        return temp

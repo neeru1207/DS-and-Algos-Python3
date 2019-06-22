@@ -77,3 +77,30 @@ class CircularSingleLinkedList:
             if curr is self.head:
                 self.head = curr.next
         return 0
+
+    # Returns True if found, else False
+    def search(self, data):
+        temp = self.head.next
+        found = False
+        if data == self.head.data:
+            return True
+        while temp is not self.head:
+            if temp.data == data:
+                found = True
+            temp = temp.next
+        return found
+
+    # Reverses the linked list and returns head of the new list
+    def reverse(self):
+        prev = self.head
+        while prev.next is not self.head:
+            prev = prev.next
+        curr = self.head
+        tempx = None
+        while tempx is not self.head:
+            nextn = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nextn
+            tempx = curr
+        return prev

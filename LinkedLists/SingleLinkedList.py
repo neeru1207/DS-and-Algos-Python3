@@ -43,6 +43,27 @@ class SingleLinkedList:
             temp = temp.next
         print("")
 
+    # Returns True if found, else False
+    def search(self, data):
+        temp = self.head
+        found = False
+        while temp is not None:
+            if temp.data == data:
+                found = True
+            temp = temp.next
+        return found
+
+    # Reverses the linked list and returns the head of the new list
+    def reverse(self):
+        prev = None
+        curr = self.head
+        while curr is not None:
+            nextn = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nextn
+        return prev
+
     # Delete by value function. Returns 0 on success and -1 on error.
     def delete_by_value(self, value):
         prev = self.head
