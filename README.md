@@ -1,7 +1,7 @@
 # Data Structures in Python3
 ## Data Structures
 ### Linked Lists
-#### Implemented: Add, delete by position, delete by value, print list
+#### Implemented: Add, delete by position, delete by value, reverse list, search and print list (forward/ reverse).
 * [Single Linked List](LinkedLists/SingleLinkedList.py)
 * [Double Linked List](LinkedLists/DoubleLinkedList.py)
 * [Circular Double Linked List](LinkedLists/CircularDoubleLinkedList.py)
@@ -20,6 +20,9 @@
 * [Undirected Adjacency List Graph](Graphs/UndirectedAdjacencylist.py)
 * [Directed Adjacency Matrix Graph](Graphs/DirectedAdjacencyMatrix.py)
 * [Directed Adjacency List Graph](Graphs/DirectedAdjacencyList.py)
+### Disjoint set
+#### Implemented: Find (Path compression), Union (By rank)
+* [Disjoint set](DisjointSet/DisjointSet.py)
 ## Status
 Not yet complete.
 ## Contributions
