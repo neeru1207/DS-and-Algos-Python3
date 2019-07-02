@@ -52,7 +52,7 @@ class MinHeap:
         self.deletion_heapify(index)
 
     def extract_min(self):
-        x = self.heap[-1]
+        x = self.heap[0]
         self.delete_node(0)
 
     def insert_node(self,value):
