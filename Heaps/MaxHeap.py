@@ -52,9 +52,10 @@ class MaxHeap:
         self.deletion_heapify(index)
 
     def extract_max(self):
-        x = self.heap[-1]
+        x = self.heap[0]
         self.delete_node(0)
-
+        return x
+    
     def insert_node(self,value):
         if self.root is None:
             self.root = value
